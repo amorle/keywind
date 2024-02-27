@@ -9,7 +9,7 @@
   <#if section="header">
     ${msg("recovery-code-config-header")}
   <#elseif section="form">
-    <div class="space-y-6" x-data="recoveryCodes">
+    <div class="space-y-2 lg:space-y-6" x-data="recoveryCodes">
       <@alert.kw color="warning">
         <div class="space-y-2">
           <h4 class="font-medium">${msg("recovery-code-config-warning-title")}</h4>
