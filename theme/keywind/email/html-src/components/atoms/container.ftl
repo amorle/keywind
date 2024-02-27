@@ -1,9 +1,19 @@
 <#macro kw>
-  <table cellpadding="0" cellspacing="0" border="0" align="center" class="relative z-20 py-10 px-4 max-w-[512px] mx-auto">
-    <tr>
-      <td align="center">
+    <table
+      border='0'
+      cellpadding='0'
+      cellspacing='0'
+      class='nl-container'
+      role='presentation'
+      style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: ${properties.backgroundColor};"
+      width='100%'
+    >
+      <tbody>
+        <tr>
+          <td>
         <#nested>
-      </td>
-    </tr>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 </#macro>

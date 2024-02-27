@@ -28,7 +28,8 @@ for (let file of files) {
       .toString()
       .replaceAll('<!--@', '</@')
       .replaceAll('<!--#', '</#')
-      .replaceAll('-->', '>');
+      .replaceAll('-->', '>')
+      .replaceAll('<![endif]>', '<![endif]-->');
     writeFileSync(path.join(__dirname, `../theme/keywind/email/html/${file}`), result);
   }
 }

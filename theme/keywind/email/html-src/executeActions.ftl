@@ -3,6 +3,14 @@
 </#outputformat>
 
 <#import "template.ftl" as layout>
-<@layout.emailLayout>
-${kcSanitize(msg("executeActionsBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
+<@layout.emailLayout ; section>
+    <#if section = "subject">
+        ${msg("executeActionsSubject")?no_esc}
+    </#if>
+    <#if section = "text">
+        ${kcSanitize(msg("executeActionsBodyHtml",link, linkExpiration, realmName, requiredActionsText, linkExpirationFormatter(linkExpiration)))?no_esc}
+    </#if>
+    <#if section = "linkText">
+        ${msg("executeActionsLinkTextHtml")?no_esc}
+    </#if>
 </@layout.emailLayout>
